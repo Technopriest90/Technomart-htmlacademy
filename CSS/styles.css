@@ -181,7 +181,6 @@ body {
 }
 
 .information-about-us .description {
-  display: block;
   float: left;
   margin: 0;
   padding-left: 53px;
@@ -337,7 +336,6 @@ main .features-row {
 }
 
 .features-item h2 {
-  display: block;
   padding-top: 21px;
   padding-left: 23px;
   margin: 0;
@@ -399,7 +397,6 @@ main .features-row {
 }
 
 .features-slide-text h2 {
-  display: block;
   margin: 0;
   padding-top: 21px;
   padding-left: 26px;
@@ -522,7 +519,6 @@ main .catalog-popular-goods {
 
 .popular-goods-title h2,
 .catalog-of-suppliers-title h2{
-    display: block;
     float: left;
     margin: 0;
     padding-top: 33px;
@@ -616,12 +612,13 @@ main .catalog-popular-goods {
 
 .popular-item .price:after{
     content: "";
-    position:absolute;
-    top:0;
-    right:-19px;
-    width:0;
-    height:0;
-    border:20px solid white;
+    position: absolute;
+    top: 0;
+    right: -19px;
+
+    width: 0;
+    height: 0;
+    border: 20px solid white;
     border-left-color:#ee3643;
 }
 
@@ -937,7 +934,6 @@ footer .top-footer {
 }
 
 .first-top-footer-menu .top-footer-navigation {
-  display: block;
   float: right;
   width: 550px;
   margin: 0;
@@ -972,7 +968,6 @@ footer .top-footer {
 }
 
 .second-top-footer-menu p {
-  display: block;
   float: left;
   width: 356px;
   margin: 0;
@@ -983,7 +978,6 @@ footer .top-footer {
 }
 
 .second-top-footer-menu .middle-footer-navigation {
-  display: block;
   float: right;
   width: 584px;
   margin: 0;
