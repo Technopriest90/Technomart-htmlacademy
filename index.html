@@ -12,7 +12,7 @@
     <div class="top-header">
       <div class="container clearfix">
         <a class="logo-header red-btn" href="#">Техномарт</a>
-        <form action="submit">
+        <form class="test" action="submit">
           <input class="search" type="text" placeholder="Поиск:">
         </form>
         <div class="order-menu">
@@ -298,4 +298,16 @@
     </div>
   </div>
   </footer>
+  <script>
+      var i = document.getElementsByTagName('input')[0],
+   message = document.getElementsByClassName('test')[0];
+
+i.onfocus = function(){
+   message.className = "test1";
+}
+
+i.onblur = function(){
+   message.className = "test";
+}
+</script>
 </body>

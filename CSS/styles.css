@@ -106,7 +106,8 @@ body {
   position: relative;
 }
 
-.top-header form::after {
+.top-header .test::after,
+.top-header .test1::after {
   position: absolute;
   left: 245px;
   top: 11px;
@@ -121,14 +122,14 @@ body {
   content: "";
 }
 
+.top-header .test1::after {
+  background-position: -42px -84px;
+}
+
 .top-header .search:focus {
   color: #000000;
   background-color: white;
   outline: none;
-}
-
-.search:focus + form::after {
-  background-position: -42px -84px;
 }
 
 .top-header .search::-webkit-input-placeholder {
