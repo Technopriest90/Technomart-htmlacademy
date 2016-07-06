@@ -74,6 +74,14 @@ body {
   content: "";
 }
 
+.logo-header:hover {
+  background: #ca2c37;
+}
+
+.logo-header:active {
+  background: #ba2732;
+}
+
 .red-btn {
   display: block;
 
@@ -106,8 +114,9 @@ body {
   position: relative;
 }
 
-.top-header .test::after,
-.top-header .test1::after {
+.top-header .loupe::after,
+.top-header .loupe-active::after,
+.top-header .loupe-no-active::after{
   position: absolute;
   left: 245px;
   top: 11px;
@@ -117,20 +126,33 @@ body {
   height: 17px;
   background: transparent url("../IMG/sprite/sprite.png") no-repeat;
   background-position: -23px -84px;
+
   text-indent: -10000px;
+  opacity: 0.3;
 
   content: "";
 }
 
-.top-header .test1::after {
+.top-header .loupe-active::after {
   background-position: -42px -84px;
+
+  opacity: 1;
 }
 
-.top-header .search:focus {
+.top-header .loupe-no-active:hover::after {
+  opacity: 1;
+}
+
+.top-header .search:hover {
+    background: #212a3a;
+}
+
+.top-header .search:focus, .search:focus:hover {
   color: #000000;
   background-color: white;
   outline: none;
 }
+
 
 .top-header .search::-webkit-input-placeholder {
     color: #ffffff;
@@ -169,6 +191,40 @@ body {
   background-color: #63a63e;
 }
 
+.order-menu .order-marks {
+    position: relative;
+}
+
+.order-menu .order-marks:hover {
+    background: #212a3a;
+}
+
+.order-menu .order-marks::after {
+  position: absolute;
+  left: 0;
+  top: 12px;
+
+  display: block;
+  width: 14px; 
+  height: 16px;
+    
+  background: transparent url("../IMG/sprite/sprite.png") no-repeat;
+  background-position: -174px -84px;
+
+  text-indent: -10000px;
+  opacity: 0.3;
+
+  content: "";
+}
+
+.order-menu .order-marks:hover::after {
+  opacity: 1;
+}
+
+.order-menu .order-marks:active {
+  opacity: 0.3;
+  background: #161d29;
+}
 /**Вторая часть шапки**/
 
 .main-header {

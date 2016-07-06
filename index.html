@@ -12,7 +12,7 @@
     <div class="top-header">
       <div class="container clearfix">
         <a class="logo-header red-btn" href="#">Техномарт</a>
-        <form class="test" action="submit">
+        <form class="loupe-no-active" action="submit">
           <input class="search" type="text" placeholder="Поиск:">
         </form>
         <div class="order-menu">
@@ -300,14 +300,14 @@
   </footer>
   <script>
       var i = document.getElementsByTagName('input')[0],
-   message = document.getElementsByClassName('test')[0];
+   message = document.getElementsByClassName('loupe-no-active')[0];
 
-i.onfocus = function(){
-   message.className = "test1";
-}
+    i.onfocus = function(){
+      message.className = "loupe-active";
+    }
 
-i.onblur = function(){
-   message.className = "test";
+    i.onblur = function(){
+      message.className = "loupe-no-active";
 }
 </script>
 </body>
