@@ -187,19 +187,18 @@ body {
   text-decoration: none;
 }
 
-.order-menu a:last-child {
-  background-color: #63a63e;
+.order-menu .order-marks,
+.order-menu .order-basket {
+  position: relative;
 }
 
-.order-menu .order-marks {
-    position: relative;
+.order-menu .order-marks:hover,
+.order-menu .order-basket:hover {
+  background: #212a3a;
 }
 
-.order-menu .order-marks:hover {
-    background: #212a3a;
-}
-
-.order-menu .order-marks::after {
+.order-menu .order-marks::after,
+.order-menu .order-basket::after {
   position: absolute;
   left: 0;
   top: 12px;
@@ -217,14 +216,33 @@ body {
   content: "";
 }
 
-.order-menu .order-marks:hover::after {
+.order-menu .order-basket::after {
+  background-position: -61px -84px;
+}
+
+.order-menu .order-marks:hover::after,
+.order-menu .order-basket:hover::after {
   opacity: 1;
 }
 
-.order-menu .order-marks:active {
+.order-menu .order-marks:active,
+.order-menu .order-basket:active{
   opacity: 0.3;
   background: #161d29;
 }
+
+.order-menu .order-confirmation {
+  background-color: #63a63e;
+}
+
+.order-menu .order-confirmation:hover {
+  background-color: #5fbb2d;
+}
+
+.order-menu .order-confirmation:active {
+  opacity: 0.51;
+}
+
 /**Вторая часть шапки**/
 
 .main-header {
@@ -255,6 +273,8 @@ body {
 }
 
 .location .phone {
+  position: relative;
+    
   display: block;
   padding-top: 7px;
   padding-right: 50px;
@@ -268,6 +288,23 @@ body {
   color: #ee3643;
   background-color: transparent;
   border: 3px solid white;
+}
+
+.location .phone::after {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+
+  display: block;
+  width: 19px; 
+  height: 19px;
+    
+  background: transparent url("../IMG/sprite/sprite.png") no-repeat;
+  background-position: -80px -84px;
+
+  text-indent: -10000px;
+
+  content: "";
 }
 
 .location .address {
@@ -285,6 +322,8 @@ body {
 }
 
 .user-block .login {
+  position: relative;
+
   display: inline-block;
   padding-top: 11px;
   padding-right: 27px;
@@ -297,6 +336,41 @@ body {
   color: #000000;
   background: white;
   text-decoration: none;
+}
+
+.user-block .login::after {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+
+  display: block;
+  width: 20px; 
+  height: 17px;
+    
+  background: transparent url("../IMG/sprite/sprite.png") no-repeat;
+  background-position: -264px -65px;
+
+  text-indent: -10000px;
+
+  content: "";
+}
+
+.user-block .login:hover::after {
+  background-position: -309px -65px;
+}
+
+.user-block .login:active::after {
+  background-position: -264px -65px;
+}
+
+.user-block .login:hover,
+.user-block .registration:hover {
+  color: #ee3643;
+}
+
+.user-block .login:active,
+.user-block .registration:active {
+  color: #cacaca;
 }
 
 .user-block .registration {
