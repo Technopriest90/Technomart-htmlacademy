@@ -395,9 +395,6 @@ body {
   margin: 0;
   padding: 0;
   width: inherit;
-
-  background-color: #32425c;
-  border-bottom: 5px solid #293449;
 }
 
 .main-navigation li {
@@ -409,16 +406,27 @@ body {
 .main-navigation a {
   display: block;
   width: 134.2px;
-
   padding-top: 22px;
   padding-bottom: 21px;
 
+    
+  background-color: #32425c;
+  border-bottom: 5px solid #293449;
   text-align: center;
   text-decoration: none;
 
   color: white;
 }
 
+.main-navigation a:hover {
+  background-color: #293449;  
+}
+
+.main-navigation a:active {
+  color: #a8abaf;
+  background-color: #1d2739;
+  border-bottom: 5px solid #1d2739;
+}
 /**Первая часть мейна со слайдером**/
 
 main .features-row {
